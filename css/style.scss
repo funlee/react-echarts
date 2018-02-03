@@ -25,3 +25,22 @@ ul,
 li {
     list-style: none;
 }
+
+nav {
+    text-align: center;
+    span {
+        display: inline-block;
+        padding: 0 16px;
+    }
+}
+
+.charts-wrap {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background: #F3F3F3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
