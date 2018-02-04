@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router, Route, NavLink } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route, NavLink, Redirect } from 'react-router-dom'
 
+import playTitle from 'play-title'
+ 
 import '../css/style.scss'
 
 import Home from './components/Home'
@@ -12,22 +14,26 @@ import Map from './components/Map'
 
 class App extends Component {
   render() {
+    playTitle()
     return (
       <Router>
         <div>
           <nav>
-            <span><NavLink to="/">Home</NavLink></span>
+            <span><NavLink exact to="/">Home</NavLink></span>
             <span><NavLink to="/bar-line">Bar And Line Charts</NavLink></span>
             <span><NavLink to="/line-area">Line And Area Charts</NavLink></span>
             <span><NavLink to="/pie">Pie Charts</NavLink></span>
             <span><NavLink to="/map">Map Charts</NavLink></span>
           </nav>
           <div className="charts-wrap">
-            <Route exact path="/" component={ Home } />
-            <Route path="/bar-line" component={ BarLine } />
-            <Route path="/line-area" component={ LineArea } />
-            <Route path="/pie" component={ Pie } />
-            <Route path="/map" component={ Map } />
+            <Switch>
+              <Redirect exact from="/" to="/home" />
+              <Route path="/home" component={Home} />
+              <Route path="/bar-line" component={BarLine} />
+              <Route path="/line-area" component={LineArea} />
+              <Route path="/pie" component={Pie} />
+              <Route path="/map" component={Map} />
+            </Switch>
           </div>          
         </div>
       </Router>
