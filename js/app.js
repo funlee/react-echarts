@@ -19,7 +19,7 @@ class App extends Component {
       <Router>
         <div>
           <nav>
-            <span><NavLink exact to="/">Home</NavLink></span>
+            <span><NavLink exact to="/home">Home</NavLink></span>
             <span><NavLink to="/bar-line">Bar And Line Charts</NavLink></span>
             <span><NavLink to="/line-area">Line And Area Charts</NavLink></span>
             <span><NavLink to="/pie">Pie Charts</NavLink></span>
