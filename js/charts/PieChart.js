@@ -29,7 +29,10 @@ export default class PieChart extends Component {
         text: '基础能量消耗',
         left: '50%',
         textAlign: 'center',
-        top: '20%'
+        top: '20%',
+        textStyle:{
+          color:'#fff'
+        }
       },
       color: ['#22C3AA'],
       series: [{
@@ -55,7 +58,7 @@ export default class PieChart extends Component {
       }, {
         type: 'pie',
         data: labelData,
-        radius: ['75%', '100%'],
+        radius: ['65%', '90%'],
         zlevel: -2,
         itemStyle: {
           normal: {

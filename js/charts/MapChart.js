@@ -33,7 +33,6 @@ export default class PieChart extends Component {
           color: '#fff'
         }
       },
-      backgroundColor: '#404a59',
       visualMap: {
         min: 0,
         max: 500,

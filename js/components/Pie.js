@@ -1,7 +1,24 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import PieChart from '../charts/PieChart'
-export default class Pie extends Component {
-  render() {
+
+class Pie extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: [],
+      labelData: []
+    }
+  }
+  componentWillMount() {
+    this.getData()
+  }
+  componentDidMount() {
+    setInterval(() => {
+      this.getData()
+    }, 5000)
+  }
+  getData() {
     let data = [];
     let labelData = [];
     for (let i = 0; i < 24; ++i) {
@@ -14,6 +31,15 @@ export default class Pie extends Component {
         name: i + ':00'
       })
     }
+    this.setState({
+      data: data,
+      labelData: labelData
+    })
+  }
+  render() {
+    const { data, labelData } = this.state
     return <PieChart data={data} labelData={labelData} />
   }
 }
+
+export default Pie

@@ -3,7 +3,7 @@
  * @Email: i@funlee.cn
  * @Date: 2018-02-03 23:50:55
  * @Last Modified time: 2018-02-03 23:50:55
- * @Description: 柱状图 && 折线图 组件 
+ * @Description: 柱状图 && 折线图 组件
  */
 import React, { Component } from 'react'
 import echarts from 'echarts'

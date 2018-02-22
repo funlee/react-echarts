@@ -3,7 +3,7 @@
  * @Email: i@funlee.cn
  * @Date: 2018-02-04 00:04:14
  * @Last Modified time: 2018-02-04 00:04:14
- * @Description: 折线图 && 面积图 组件 
+ * @Description: 折线图 && 面积图 组件
  */
 import React, { Component } from 'react'
 import echarts from 'echarts'
@@ -49,7 +49,7 @@ export default class LineAreaChart extends Component {
         right: '4%',
         textStyle: {
           fontSize: 12,
-          color: '#333'
+          color: '#fff'
         }
       },
       grid: {
@@ -63,7 +63,7 @@ export default class LineAreaChart extends Component {
         boundaryGap: false,
         axisLine: {
           lineStyle: {
-            color: '#57617B'
+            color: '#fff'
           }
         },
         data: ['13:00', '13:05', '13:10', '13:15', '13:20', '13:25', '13:30', '13:35', '13:40', '13:45', '13:50', '13:55']
@@ -91,13 +91,14 @@ export default class LineAreaChart extends Component {
         },
         axisLine: {
           lineStyle: {
-            color: '#57617B'
+            color: '#fff'
           }
         },
         axisLabel: {
           margin: 10,
           textStyle: {
-            fontSize: 14
+            fontSize: 14,
+            color: '#fff'
           }
         },
         splitLine: {
